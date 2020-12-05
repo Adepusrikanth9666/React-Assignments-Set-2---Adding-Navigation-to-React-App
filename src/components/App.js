@@ -9,15 +9,14 @@ class App extends Component {
 
         return(
             <div id="main">
-              <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  
-              </ul>
+            
+                  <a href="/">Home</a> <br/>
+                  <a href="/about">About</a>
+             
             <Switch>
-            <Route path="/about" component={About}/>
+                <Route path="/about" component={About}/>
                 <Route path="/" component={Home}/>
-               
+                
             </Switch>
 
             </div>
