@@ -3,6 +3,8 @@ import '../styles/App.css';
 import { Switch, Route } from "react-router";
 import Home from "./Home";
 import About from "./About";
+// import LocationDisplay from "./LocationDisplay";
+
 
 class App extends Component {
     render() {
@@ -16,8 +18,7 @@ class App extends Component {
             <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/" component={Home}/>
-                
-            </Switch>
+              </Switch>
 
             </div>
         )

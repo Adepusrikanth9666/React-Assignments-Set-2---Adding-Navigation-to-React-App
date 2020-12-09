@@ -1,12 +1,13 @@
 import React from'react';
-import  useLocation from "react-router-dom";
-function usePageViews() {
-  let location = useLocation();
-  React.useEffect(() => {
-    console.log(location);
-  }, [location]);
+// import  useLocation from "react-router-dom";
+import { useLocation } from 'react-router-dom'
+
+function HeaderView() {
+  const location = useLocation();
+  console.log(location.pathname);
+  return <h1 data-testid="location-display">{location.pathname}</h1>
 }
 export default function LocationDisplay(){
-  usePageViews();
- return <h1>You are home.</h1>
+  return HeaderView();
+//  return <h1 data-testid="location-display">hello</h1>
 }
