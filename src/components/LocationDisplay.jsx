@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 function HeaderView() {
   const location = useLocation();
   console.log(location.pathname);
-  return <h1 data-testid="location-display">{location.pathname}</h1>
+  return <div data-testid="location-display">{location.pathname}</div>
 }
 export default function LocationDisplay(){
   return HeaderView();

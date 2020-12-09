@@ -3,7 +3,9 @@ import '../styles/App.css';
 import { Switch, Route } from "react-router";
 import Home from "./Home";
 import About from "./About";
-// import LocationDisplay from "./LocationDisplay";
+import LocationDisplay from "./LocationDisplay";
+import Nomatch from "./Nomatch";
+import { Link } from "react-router-dom";
 
 
 class App extends Component {
@@ -12,13 +14,15 @@ class App extends Component {
         return(
             <div id="main">
             
-                  <a href="/">Home</a> <br/>
-                  <a href="/about">About</a>
+                  <Link to="/">Home</Link> 
+                  <Link to="/about">About</Link>
              
-            <Switch>
+             <Switch>
                 <Route path="/about" component={About}/>
-                <Route path="/" component={Home}/>
+                <Route path="/" exact component={Home}/>
+                <Route path="/" component={Nomatch} />
               </Switch>
+              <LocationDisplay />
 
             </div>
         )
@@ -27,3 +31,4 @@ class App extends Component {
 
 
 export default App;
+
