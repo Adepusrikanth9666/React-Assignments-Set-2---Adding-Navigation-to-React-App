@@ -3,7 +3,7 @@ import '../styles/App.css';
 import { Switch, Route } from "react-router";
 import Home from "./Home";
 import About from "./About";
-import LocationDisplay from "./LocationDisplay";
+import LocationDisplayPath from "./LocationDisplay";
 import Nomatch from "./Nomatch";
 import { Link } from "react-router-dom";
 
@@ -22,14 +22,13 @@ class App extends Component {
                 <Route path="/" exact component={Home}/>
                 <Route path="/" component={Nomatch} />
               </Switch>
-              <LocationDisplay />
-
-            </div>
+              <LocationDisplayPath />
+              </div>
         )
     }
 }
 
 
 export default App;
-export const locationPath = LocationDisplay;
+export const LocationDisplay = LocationDisplayPath;
 
